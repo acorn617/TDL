@@ -1,0 +1,8 @@
+.alert-box {
+    display: none; 
+    background-color: #20b2aa;
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+    /* hide :none , appear : block */
+  } 

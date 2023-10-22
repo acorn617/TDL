@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="UTF-8">
+      <title>document</title>
+      <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+        <div class="alert-box" id="alert">아이디를 입력해 주세요
+            <button id="close">close</button>
+        </div>
+        <button onclick="document.getElementById('alert').style.display='block';"> button </button>   
+        
+    </body>
+</html>
+<script>
+    document.getElementById('close').addEventListener('click',function(){
+        document.getElementById('alert').style.display='none';
+    });
+   
+</script>
