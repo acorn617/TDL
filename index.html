@@ -18,7 +18,7 @@
     <div class="black-bg">
       <div class="white-bg">
         <h4>로그인하세요</h4>
-        <button class="btn btn-danger" id="close">닫기</button>
+        <button class="btn btn-danger close" >닫기</button>
       </div>
     </div> 
 
@@ -27,7 +27,7 @@
     <nav class="navbar navbar-light bg-light">
       <div class="container-fluid">
         <span class="navbar-brand">Navbar</span>
-        <button class="navbar-toggler" type="button">
+        <button  class="navbar-toggler" type="button">
           <span class="navbar-toggler-icon"></span>
         </button>
       </div>
@@ -54,16 +54,17 @@
     document.querySelectorAll('.list-group')[0].classList.toggle('show');
     });
 
-   
+    // Open the modal
      $('#login').on('click', function(){
      $('.black-bg').addClass('show-modal');
     });
 
-    $('#login').on('click', function(){
-     $('.black-bg').addClass('show-modal');
+  
+
+    // Clsoe the modal
+    $('.close').on('click', function(){
+     $('.black-bg').removeClass('show-modal');
     });
-
-
 
     </script>
     <!-- Option 1: Bootstrap Bundle with Popper -->
