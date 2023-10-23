@@ -13,7 +13,17 @@
     <title>document</title>
   </head>
   <body>
-    
+
+    <!-- modal div  -->
+    <div class="black-bg">
+      <div class="white-bg">
+        <h4>로그인하세요</h4>
+        <button class="btn btn-danger" id="close">닫기</button>
+      </div>
+    </div> 
+
+
+    <!-- navbar -->
     <nav class="navbar navbar-light bg-light">
       <div class="container-fluid">
         <span class="navbar-brand">Navbar</span>
@@ -22,6 +32,8 @@
         </button>
       </div>
     </nav> 
+
+    <!-- sub-menu -->
     <ul class="list-group">
       <li class="list-group-item">An item</li>
       <li class="list-group-item">A second item</li>
@@ -30,12 +42,28 @@
       <li class="list-group-item">And a fifth one</li>
     </ul> 
 
+    <!--log-in button for modal div  -->
+    <button id="login" type="button" class="btn btn-primary">log-in</button>
+
+
+   
+     <!-- jQuery cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> 
     <script>
-    
-    
     document.querySelector('.navbar-toggler').addEventListener('click', function(){
     document.querySelectorAll('.list-group')[0].classList.toggle('show');
     });
+
+   
+     $('#login').on('click', function(){
+     $('.black-bg').addClass('show-modal');
+    });
+
+    $('#login').on('click', function(){
+     $('.black-bg').addClass('show-modal');
+    });
+
+
 
     </script>
     <!-- Option 1: Bootstrap Bundle with Popper -->
