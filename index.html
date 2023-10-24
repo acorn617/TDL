@@ -18,7 +18,21 @@
     <div class="black-bg">
       <div class="white-bg">
         <h4>로그인하세요</h4>
-        <button class="btn btn-danger close" >닫기</button>
+       
+        <!-- 입력폼 추가, id="email" 추가  -->
+        <form action="success.html">
+          <div class="my-3">
+            <input type="text" class="form-control" id="email">
+           </div>
+           <div class="my-3">
+             <input type="password" class="form-control">
+           </div>
+           <!-- 버튼에 id="send" 추가-->
+           <button id="send" type="submit" class="btn btn-primary">전송</button>
+
+           <!-- 버튼에 close클래스 추가 -->
+           <button type="button" class="btn btn-danger close" id="close">닫기</button>
+        </form> 
       </div>
     </div> 
 
@@ -32,6 +46,9 @@
         </button>
       </div>
     </nav> 
+
+
+    
 
     <!-- sub-menu -->
     <ul class="list-group">
@@ -64,6 +81,15 @@
     // Clsoe the modal
     $('.close').on('click', function(){
      $('.black-bg').removeClass('show-modal');
+    });
+
+
+    // 전송버튼 누르고 입력값이 공백이면 '아이디를 입력하세요'라는 알림창 팝업 생성
+
+   $('#send').on('click', function(){
+    if ($('#email').val() == ''){
+      alert('아이디를 입력하세요') 
+   }
     });
 
     </script>

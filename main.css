@@ -12,12 +12,14 @@
     height: 0px ;
     opacity : 0;
     transition : all 0.7s;
+    /* overflow : hidden; 없으면 로그인 버튼이 안눌려지게됨 */
+    overflow : hidden; 
  }
  .show {
     /* Add animation 2 */
     height: 400px ;
     opacity : 1;
-    
+    overflow: visible;
  }
 
  .black-bg {
