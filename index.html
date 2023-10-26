@@ -36,6 +36,7 @@
       </div>
     </div> 
 
+    
 
     <!-- navbar -->
     <nav class="navbar navbar-light bg-light">
@@ -61,6 +62,11 @@
 
     <!--log-in button for modal div  -->
     <button id="login" type="button" class="btn btn-primary">log-in</button>
+
+    <!-- 다크모드 버튼추가 -->
+    <span class="dark-mode badge bg-dark ms-auto mx-3">Dark  🔄</span>
+
+    
 
 
    
@@ -90,8 +96,24 @@
     const length=$('#email').val().length;
     if (length < 6){
       alert('아이디가 6글자 미만입니다') 
-   }
+    }
     });
+
+    
+   
+var count=0;
+    $('.badge').on('click', function(){
+  count += 1;
+  if (count % 2 > 0) {
+
+    $('.badge').removeClass('dark-mode');
+    $('.badge').html('Light 🔄');
+
+  } else {
+    $('.badge').addClass("dark-mode");
+    $('.badge').html('Dark  🔄')
+  }
+});
 
     </script>
     <!-- Option 1: Bootstrap Bundle with Popper -->
