@@ -64,7 +64,7 @@
     <button id="login" type="button" class="btn btn-primary">log-in</button>
 
     <!-- 다크모드 버튼추가 -->
-    <span class="dark-mode badge bg-dark ms-auto mx-3">Dark  🔄</span>
+    <span class="dark-mode badge bg-dark ms-auto mx-3">Light 🔄</span>
 
     
 
@@ -102,19 +102,22 @@
     
    
 var count=0;
-    $('.badge').on('click', function(){
-  count += 1;
-  if (count % 2 > 0) {
+var body = document.querySelector('body'); 
+  $('.badge').on('click', function(){
+   count += 1;
+   if (count % 2 > 0) {
 
-    $('.badge').removeClass('dark-mode');
-    $('.badge').html('Light 🔄');
+    body.style.backgroundColor = '#292929';  //배경색 변경
+     body.style.color = 'white'; //css가 적용되지 않은 기본 텍스트 색상 변경
+     $('.badge').html('Dark  🔄')
 
-  } else {
-    $('.badge').addClass("dark-mode");
-    $('.badge').html('Dark  🔄')
-  }
-});
-
+   } else {
+    body.style.backgroundColor = 'white';  //배경색 변경
+     body.style.color = 'black'; //css가 적용되지 않은 기본 텍스트 색상 변경
+     $('.badge').html('Light 🔄');
+   }
+  });
+  
     </script>
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
