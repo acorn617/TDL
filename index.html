@@ -66,8 +66,9 @@
     <!-- 다크모드 버튼추가 -->
     <span class="dark-mode badge bg-dark ms-auto mx-3">Light 🔄</span>
 
-    
-
+    <!-- 타이머알람 추가 -->
+    <div class="alert alert-danger"><span id="timer">5</span>초이내 구매시 사은품 증정</div>
+ 
 
    
      <!-- jQuery cdn -->
@@ -100,7 +101,7 @@
     });
 
     
-   
+  //  다크모드 기능 추가
 var count=0;
 var body = document.querySelector('body'); 
   $('.badge').on('click', function(){
@@ -117,6 +118,16 @@ var body = document.querySelector('body');
      $('.badge').html('Light 🔄');
    }
   });
+
+  // 타이머 기능 추가
+  var count=5;
+  setInterval(function(){ 
+    if (count>0) {
+      count--;
+      document.querySelector('#timer').innerHTML = count;
+      console.log(count);
+    } 
+  }, 1000);
   
     </script>
     <!-- Option 1: Bootstrap Bundle with Popper -->
